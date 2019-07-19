@@ -82,7 +82,7 @@ static AMapLocationManager *_locationManager;
 }
 
 - (void)amapLocationManager:(AMapLocationManager *)manager doRequireLocationAuth:(CLLocationManager*)locationManager {
-    [_locationManager requestAlwaysAuthorization];
+    [locationManager requestAlwaysAuthorization];
 }
 
 - (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location reGeocode:(AMapLocationReGeocode *)reGeocode {
