@@ -132,6 +132,10 @@ static NSString *markerClickedChannelName = @"me.yohom/marker_clicked";
 
 #pragma MAMapViewDelegate
 
+- (void)mapViewRequireLocationAuth:(CLLocationManager *)locationManager{
+    [locationManager requestAlwaysAuthorization];
+}
+
 /// 点击annotation回调
 - (void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view {
   if ([view.annotation isKindOfClass:[MarkerAnnotation class]]) {
